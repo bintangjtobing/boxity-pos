@@ -1,15 +1,15 @@
-## About Ultimate POS
+## About Lunar POS by Boxity
 
-Ultimate POS is a POS application by [Ultimate Fosters](http://ultimatefosters.com), a brand of [The Web Fosters](http://thewebfosters.com).
+Lunar POS by Boxity is a POS application by [Boxity](https://boxity.id), a brand of [Boxity Central Indonesia](https://boxity.id).
 
 ## Installation & Documentation
 You will find installation guide and documentation in the downloaded zip file.
-Also, For complete updated documentation of the ultimate pos please visit online [documentation guide](http://ultimatefosters.com/ultimate-pos/).
+Also, For complete updated documentation of the Lunar POS by Boxity please visit online [documentation guide](https://boxity.id/ultimate-pos/).
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within ultimate POS, please send an e-mail to support at thewebfosters@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Lunar POS by Boxity, please send an e-mail to support at info@boxity.id. All security vulnerabilities will be promptly addressed.
 
 ## License
 
-The Ultimate POS software is licensed under the [Codecanyon license](https://codecanyon.net/licenses/standard).
+The Lunar POS by Boxity software is licensed under the [Codecanyon license](https://codecanyon.net/licenses/standard).
