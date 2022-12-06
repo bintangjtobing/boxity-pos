@@ -6,6 +6,6 @@
     </div> -->
     <!-- Default to the left -->
     <small>
-    	<b>{{ config('app.name', 'LunarPOS by Boxity') }} - V{{config('author.app_version')}} | Copyright &copy; {{ date('Y') }} All rights reserved.</b>
+    	<b>{{ config('app.name', 'LunarPOS by Boxity') }} - V{{config('author.app_version')}} | Copyright &copy; {{ date('Y') }} All rights reserved by Boxity Central Indonesia.</b>
     </small>
 </footer>

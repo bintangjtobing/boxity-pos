@@ -324,7 +324,7 @@
         <div class="container">
             <p class="text-muted pull-right">
                 <small>
-                    {{ config('app.name', 'LunarPOS by Boxity') }} - V{{config('author.app_version')}} | Copyright &copy; {{ date('Y') }} All rights reserved.
+                    {{ config('app.name', 'LunarPOS by Boxity') }} - V{{config('author.app_version')}} | Copyright &copy; {{ date('Y') }} All rights reserved by Boxity Central Indonesia.
                 </small>
             </p>
         </div>

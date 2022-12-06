@@ -21,7 +21,7 @@
     {{-- Footer --}}
     @slot('footer')
         @component('mail::footer')
-            © {{ date('Y') }} {{ config('app.name') }}. All rights reserved.
+            © {{ date('Y') }} {{ config('app.name') }}. All rights reserved by Boxity Central Indonesia.
         @endcomponent
     @endslot
 @endcomponent

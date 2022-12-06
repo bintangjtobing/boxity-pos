@@ -124,6 +124,7 @@
 		"../../build/scss/skins/_all-skins.scss",
 		"../../build/scss/skins/skin-blue.scss",
 		"../../build/scss/skins/skin-blue-light.scss",
+		"../../build/scss/skins/skin-orange.scss",
 		"../../build/scss/skins/skin-black.scss",
 		"../../build/scss/skins/skin-black-light.scss",
 		"../../build/scss/skins/skin-green.scss",
