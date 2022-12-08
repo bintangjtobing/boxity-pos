@@ -18,7 +18,7 @@
         	<h3 class="box-title">@lang('lang_v1.all_your_discounts')</h3>
             @can('brand.create')
             	<div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     data-href="{{action('DiscountController@create')}}" 
                     data-container=".discount_modal">
                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

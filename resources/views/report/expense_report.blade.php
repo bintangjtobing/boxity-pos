@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12">
-                  <button type="submit" class="btn btn-primary pull-right">@lang('report.apply_filters')</button>
+                  <button type="submit" class="btn btn-primary-boxity pull-right">@lang('report.apply_filters')</button>
                 </div> 
                 {!! Form::close() !!}
             @endcomponent
@@ -42,14 +42,14 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            @component('components.widget', ['class' => 'box-primary'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
                 {!! $chart->container() !!}
             @endcomponent
         </div>
     </div>
     <div class="row">
         <div class="col-md-12">
-        @component('components.widget', ['class' => 'box-primary'])
+        @component('components.widget', ['class' => 'box-primary-boxity'])
             <table class="table" id="expense_report_table">
                 <thead>
                     <tr>

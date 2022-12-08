@@ -12,7 +12,7 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('stock_adjustment.all_stock_adjustments')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('stock_adjustment.all_stock_adjustments')])
         @slot('tool')
             <div class="box-tools">
                 <a class="btn btn-block btn-primary" href="{{action('StockAdjustmentController@create')}}">

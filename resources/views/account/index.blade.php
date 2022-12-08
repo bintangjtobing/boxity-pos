@@ -58,7 +58,7 @@
                                         {!! Form::select('account_status', ['active' => __('business.is_active'), 'closed' => __('account.closed')], null, ['class' => 'form-control select2', 'style' => 'width:100%', 'id' => 'account_status']); !!}
                                     </div>
                                     <div class="col-md-8">
-                                        <button type="button" class="btn btn-primary btn-modal pull-right" 
+                                        <button type="button" class="btn btn-primary-boxity btn-modal pull-right" 
                                             data-container=".account_model"
                                             data-href="{{action('AccountController@create')}}">
                                             <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>
@@ -112,7 +112,7 @@
                     <div class="tab-pane" id="account_types">
                         <div class="row">
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-primary btn-modal pull-right" 
+                                <button type="button" class="btn btn-primary-boxity btn-modal pull-right" 
                                     data-href="{{action('AccountTypeController@create')}}"
                                     data-container="#account_type_modal">
                                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>
@@ -135,7 +135,7 @@
                                                 <td>
                                                     
                                                     {!! Form::open(['url' => action('AccountTypeController@destroy', $account_type->id), 'method' => 'delete' ]) !!}
-                                                    <button type="button" class="btn btn-primary btn-modal btn-xs" 
+                                                    <button type="button" class="btn btn-primary-boxity btn-modal btn-xs" 
                                                     data-href="{{action('AccountTypeController@edit', $account_type->id)}}"
                                                     data-container="#account_type_modal">
                                                     <i class="fa fa-edit"></i> @lang( 'messages.edit' )</button>
@@ -152,7 +152,7 @@
                                                         
 
                                                         {!! Form::open(['url' => action('AccountTypeController@destroy', $sub_type->id), 'method' => 'delete' ]) !!}
-                                                            <button type="button" class="btn btn-primary btn-modal btn-xs" 
+                                                            <button type="button" class="btn btn-primary-boxity btn-modal btn-xs" 
                                                         data-href="{{action('AccountTypeController@edit', $sub_type->id)}}"
                                                         data-container="#account_type_modal">
                                                         <i class="fa fa-edit"></i> @lang( 'messages.edit' )</button>

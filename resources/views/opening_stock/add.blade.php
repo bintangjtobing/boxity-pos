@@ -15,7 +15,7 @@
 	@include('opening_stock.form-part')
 	<div class="row">
 		<div class="col-sm-12">
-			<button type="submit" class="btn btn-primary pull-right">@lang('messages.save')</button>
+			<button type="submit" class="btn btn-primary-boxity pull-right">@lang('messages.save')</button>
 		</div>
 	</div>
 

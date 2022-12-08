@@ -39,7 +39,7 @@
             </div>
         </div>
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         @slot('tool')
             <div class="box-tools">
                 <a class="btn btn-block btn-primary" href="{{action('SellController@create', ['status' => 'quotation'])}}">

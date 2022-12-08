@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-md-3">
                 <!-- Profile Image -->
-                <div class="box box-primary">
+                <div class="box box-primary-boxity">
                     <div class="box-body box-profile">
                         @php
                             if(isset($user->media->display_url)) {
@@ -60,7 +60,7 @@
                             </li>
                         </ul>
                         @can('user.update')
-                            <a href="{{action('ManageUserController@edit', [$user->id])}}" class="btn btn-primary btn-block">
+                            <a href="{{action('ManageUserController@edit', [$user->id])}}" class="btn btn-primary-boxity btn-block">
                                 <i class="glyphicon glyphicon-edit"></i>
                                 @lang("messages.edit")
                             </a>

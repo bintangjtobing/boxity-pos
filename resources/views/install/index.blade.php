@@ -11,7 +11,7 @@
           <hr/>
           @include('install.partials.nav', ['active' => 'install'])
 
-          <div class="box box-primary active">
+          <div class="box box-primary-boxity active">
             <!-- /.box-header -->
             <div class="box-body">
               <h3 class="text-success">
@@ -53,7 +53,7 @@
 
               @include('install.partials.e_license')
               
-              <a href="{{route('install.details')}}" class="btn btn-primary pull-right">I Agree, Let's Go!</a>
+              <a href="{{route('install.details')}}" class="btn btn-primary-boxity pull-right">I Agree, Let's Go!</a>
             </div>
           <!-- /.box-body -->
           </div>

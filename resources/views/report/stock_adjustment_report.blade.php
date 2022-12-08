@@ -88,7 +88,7 @@
 
     <div class="row">
         <div class="col-sm-12">
-            @component('components.widget', ['class' => 'box-primary', 'title' => __('stock_adjustment.stock_adjustments')])
+            @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('stock_adjustment.stock_adjustments')])
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped" id="stock_adjustment_table">
                         <thead>

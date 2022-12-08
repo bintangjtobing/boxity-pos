@@ -49,7 +49,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            @component('components.widget', ['class' => 'box-primary'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped" 
                     id="purchase_payment_report_table">

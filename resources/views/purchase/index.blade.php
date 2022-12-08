@@ -49,7 +49,7 @@
         </div>
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('purchase.all_purchases')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('purchase.all_purchases')])
         @can('purchase.create')
             @slot('tool')
                 <div class="box-tools">

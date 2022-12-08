@@ -221,7 +221,7 @@
 
 		<div class="row">
 		<div class="col-sm-12">
-			<button type="button" id="submit_sell_return_form" class="btn btn-primary pull-right btn-flat">@lang('messages.save')</button>
+			<button type="button" id="submit_sell_return_form" class="btn btn-primary-boxity pull-right btn-rounded">@lang('messages.save')</button>
 		</div>
 		</div>
 

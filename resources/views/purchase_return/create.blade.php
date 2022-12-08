@@ -138,7 +138,7 @@
 	</div> <!--box end-->
 	<div class="row">
 		<div class="col-md-12">
-			<button type="button" id="submit_purchase_return_form" class="btn btn-primary pull-right btn-flat">@lang('messages.submit')</button>
+			<button type="button" id="submit_purchase_return_form" class="btn btn-primary-boxity pull-right btn-rounded">@lang('messages.submit')</button>
 		</div>
 	</div>
 	{!! Form::close() !!}

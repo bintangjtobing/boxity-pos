@@ -88,11 +88,11 @@
     </div>
     @endcomponent
     <input type="hidden" value="{{$type}}" id="contact_type">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'contact.all_your_contact', ['contacts' => __('lang_v1.'.$type.'s') ])])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'contact.all_your_contact', ['contacts' => __('lang_v1.'.$type.'s') ])])
         @if(auth()->user()->can('supplier.create') || auth()->user()->can('customer.create') || auth()->user()->can('supplier.view_own') || auth()->user()->can('customer.view_own'))
             @slot('tool')
                 <div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     data-href="{{action('ContactController@create', ['type' => $type])}}" 
                     data-container=".contact_modal">
                     <i class="fa fa-plus"></i> @lang('messages.add')</button>

@@ -59,7 +59,7 @@
         @endif
     </td>
     <td @if($count_child_payments > 0) class="bg-gray" @endif>
-        <button type="button" class="btn btn-primary btn-xs btn-modal" data-href="{{action('TransactionPaymentController@viewPayment', [$payment->id])}}" data-container=".view_modal"><i class="fas fa-eye"></i>{{__('messages.view')}}</button>
+        <button type="button" class="btn btn-primary-boxity btn-xs btn-modal" data-href="{{action('TransactionPaymentController@viewPayment', [$payment->id])}}" data-container=".view_modal"><i class="fas fa-eye"></i>{{__('messages.view')}}</button>
 
         @if(!empty($transaction_id))
              <button type="button" class="btn btn-info btn-xs btn-modal" data-href="{{action('TransactionPaymentController@edit', [$payment->id])}}" data-container=".view_modal"><i class="fas fa-edit"></i> {{__('messages.edit')}}</button>

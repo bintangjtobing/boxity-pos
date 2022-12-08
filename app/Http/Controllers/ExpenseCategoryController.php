@@ -23,12 +23,12 @@ class ExpenseCategoryController extends Controller
             $business_id = request()->session()->get('user.business_id');
 
             $expense_category = ExpenseCategory::where('business_id', $business_id)
-                        ->select(['name', 'code', 'id', 'parent_id']);
+                ->select(['name', 'code', 'id', 'parent_id']);
 
             return Datatables::of($expense_category)
                 ->addColumn(
                     'action',
-                    '<button data-href="{{action(\'ExpenseCategoryController@edit\', [$id])}}" class="btn btn-xs btn-primary btn-modal" data-container=".expense_category_modal"><i class="glyphicon glyphicon-edit"></i>  @lang("messages.edit")</button>
+                    '<button data-href="{{action(\'ExpenseCategoryController@edit\', [$id])}}" class="btn btn-xs btn-primary-boxity btn-modal" data-container=".expense_category_modal"><i class="glyphicon glyphicon-edit"></i>  @lang("messages.edit")</button>
                         &nbsp;
                         <button data-href="{{action(\'ExpenseCategoryController@destroy\', [$id])}}" class="btn btn-xs btn-danger delete_expense_category"><i class="glyphicon glyphicon-trash"></i> @lang("messages.delete")</button>'
                 )
@@ -61,8 +61,8 @@ class ExpenseCategoryController extends Controller
 
         $business_id = request()->session()->get('user.business_id');
         $categories = ExpenseCategory::where('business_id', $business_id)
-                        ->whereNull('parent_id')
-                        ->pluck('name', 'id');
+            ->whereNull('parent_id')
+            ->pluck('name', 'id');
 
         return view('expense_category.create')->with(compact('categories'));
     }
@@ -88,15 +88,17 @@ class ExpenseCategoryController extends Controller
             }
 
             ExpenseCategory::create($input);
-            $output = ['success' => true,
-                            'msg' => __("expense.added_success")
-                        ];
+            $output = [
+                'success' => true,
+                'msg' => __("expense.added_success")
+            ];
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-            $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+            $output = [
+                'success' => false,
+                'msg' => __("messages.something_went_wrong")
+            ];
         }
 
         return $output;
@@ -130,11 +132,11 @@ class ExpenseCategoryController extends Controller
             $expense_category = ExpenseCategory::where('business_id', $business_id)->find($id);
 
             $categories = ExpenseCategory::where('business_id', $business_id)
-                        ->whereNull('parent_id')
-                        ->pluck('name', 'id');
+                ->whereNull('parent_id')
+                ->pluck('name', 'id');
 
             return view('expense_category.edit')
-                    ->with(compact('expense_category', 'categories'));
+                ->with(compact('expense_category', 'categories'));
         }
     }
 
@@ -168,15 +170,17 @@ class ExpenseCategoryController extends Controller
 
                 $expense_category->save();
 
-                $output = ['success' => true,
-                            'msg' => __("expense.updated_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("expense.updated_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -205,15 +209,17 @@ class ExpenseCategoryController extends Controller
                 //delete sub categories also
                 ExpenseCategory::where('business_id', $business_id)->where('parent_id', $id)->delete();
 
-                $output = ['success' => true,
-                            'msg' => __("expense.deleted_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("expense.deleted_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -226,15 +232,15 @@ class ExpenseCategoryController extends Controller
             $category_id = $request->input('cat_id');
             $business_id = $request->session()->get('user.business_id');
             $sub_categories = ExpenseCategory::where('business_id', $business_id)
-                        ->where('parent_id', $category_id)
-                        ->select(['name', 'id'])
-                        ->get();
+                ->where('parent_id', $category_id)
+                ->select(['name', 'id'])
+                ->get();
         }
 
         $html = '<option value="">' . __('lang_v1.none') . '</option>';
         if (!empty($sub_categories)) {
             foreach ($sub_categories as $sub_category) {
-                $html .= '<option value="' . $sub_category->id .'">' .$sub_category->name . '</option>';
+                $html .= '<option value="' . $sub_category->id . '">' . $sub_category->name . '</option>';
             }
         }
         echo $html;

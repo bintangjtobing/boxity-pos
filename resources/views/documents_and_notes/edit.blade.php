@@ -55,7 +55,7 @@
             @endif
         </div>
         <div class="modal-footer">
-            <button type="submit" class="btn btn-primary btn-sm">
+            <button type="submit" class="btn btn-primary-boxity btn-sm">
                 @lang('messages.update')
             </button>
             <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">

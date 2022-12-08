@@ -13,7 +13,7 @@
         <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
         <li class="active">Here</li>
     </ol> -->
-    <button class="btn btn-sm btn-primary upload_module_btn mt-5">
+    <button class="btn btn-sm btn-primary-boxity upload_module_btn mt-5">
         <i class="fas fa-upload"></i>
         @lang('lang_v1.upload_module')
     </button>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="clearfix"></div>
                     <div class="col-sm-4">
-                        <button type="submit" class="btn btn-primary btn-sm">
+                        <button type="submit" class="btn btn-primary-boxity btn-sm">
                             @lang('lang_v1.upload')
                         </button>
                         &nbsp;

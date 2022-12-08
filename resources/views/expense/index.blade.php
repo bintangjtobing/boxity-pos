@@ -58,7 +58,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            @component('components.widget', ['class' => 'box-primary', 'title' => __('expense.all_expenses')])
+            @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('expense.all_expenses')])
                 @can('expense.add')
                     @slot('tool')
                         <div class="box-tools">

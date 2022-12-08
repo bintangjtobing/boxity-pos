@@ -25,7 +25,7 @@
             </div>
         </div>
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.all_purchase_returns')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.all_purchase_returns')])
         @can('purchase.update')
             @slot('tool')
                 <div class="box-tools">

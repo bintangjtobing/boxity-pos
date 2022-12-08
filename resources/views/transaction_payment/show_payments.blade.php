@@ -157,7 +157,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         @if((auth()->user()->can('purchase.payments') && (in_array($transaction->type, ['purchase', 'purchase_return']))) || (auth()->user()->can('sell.payments') && (in_array($transaction->type, ['sell', 'sell_return']))) || ((auth()->user()->can('all_expense.access') || auth()->user()->can('view_own_expense')) &&  $transaction->type == 'expense') )
-                            <a href="{{ action('TransactionPaymentController@addPayment', [$transaction->id]) }}" class="btn btn-primary btn-xs pull-right add_payment_modal no-print"><i class="fa fa-plus" aria-hidden="true"></i> @lang("purchase.add_payment")</a>
+                            <a href="{{ action('TransactionPaymentController@addPayment', [$transaction->id]) }}" class="btn btn-primary-boxity btn-xs pull-right add_payment_modal no-print"><i class="fa fa-plus" aria-hidden="true"></i> @lang("purchase.add_payment")</a>
                         @endif
                     </div>
                 </div>
@@ -201,7 +201,7 @@
                                     ><i class="fa fa-trash" aria-hidden="true"></i></button>
                                 @endif
                               &nbsp;
-                                <button type="button" class="btn btn-primary btn-xs view_payment" data-href="{{ action('TransactionPaymentController@viewPayment', [$payment->id]) }}">
+                                <button type="button" class="btn btn-primary-boxity btn-xs view_payment" data-href="{{ action('TransactionPaymentController@viewPayment', [$payment->id]) }}">
                                   <i class="fa fa-eye" aria-hidden="true"></i>
                                 </button>
                               @if(!empty($payment->document_path))
@@ -227,7 +227,7 @@
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn btn-primary no-print" 
+            <button type="button" class="btn btn-primary-boxity no-print" 
               aria-label="Print" 
                 onclick="$(this).closest('div.modal').printThis();">
                 <i class="fa fa-print"></i> @lang( 'messages.print' )

@@ -38,7 +38,7 @@
         </div>
         <br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">@lang('lang_v1.reset_password')</button>
+            <button type="submit" class="btn btn-primary-boxity btn-block btn-rounded">@lang('lang_v1.reset_password')</button>
             <!-- /.col -->
         </div>
     </form>

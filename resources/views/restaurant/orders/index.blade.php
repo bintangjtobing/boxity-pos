@@ -11,7 +11,7 @@
             <h3>@lang( 'restaurant.all_orders' ) @show_tooltip(__('lang_v1.tooltip_serviceorder'))</h3>
         </div>
         <div class="col-sm-12">
-            <button type="button" class="btn btn-sm btn-primary pull-right" id="refresh_orders"><i class="fas fa-sync"></i> @lang( 'restaurant.refresh' )</button>
+            <button type="button" class="btn btn-sm btn-primary-boxity pull-right" id="refresh_orders"><i class="fas fa-sync"></i> @lang( 'restaurant.refresh' )</button>
         </div>
     </div>
     <br>

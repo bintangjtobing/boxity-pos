@@ -11,10 +11,10 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'lang_v1.all_warranties' )])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'lang_v1.all_warranties' )])
         @slot('tool')
             <div class="box-tools">
-                <button type="button" class="btn btn-block btn-primary btn-modal" 
+                <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     data-href="{{action('WarrantyController@create')}}" 
                     data-container=".view_modal">
                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

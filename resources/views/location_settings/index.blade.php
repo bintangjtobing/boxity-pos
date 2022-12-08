@@ -108,7 +108,7 @@
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <button class="btn btn-primary pull-right" type="submit">@lang('messages.update')</button>
+                                <button class="btn btn-primary-boxity pull-right" type="submit">@lang('messages.update')</button>
                             </div>
                         </div>
                         {!! Form::close() !!}

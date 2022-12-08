@@ -16,7 +16,7 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('printer.all_your_printer')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('printer.all_your_printer')])
         @slot('tool')
             <div class="box-tools">
                 <a class="btn btn-block btn-primary" href="{{action('PrinterController@create')}}">

@@ -39,7 +39,7 @@
 	</div>
 
 	<div class="col-sm-4 @if(empty($featured_products)) hide @endif" id="feature_product_div">
-		<button type="button" class="btn btn-primary btn-flat" id="show_featured_products">@lang('lang_v1.featured_products')</button>
+		<button type="button" class="btn btn-primary-boxity btn-rounded" id="show_featured_products">@lang('lang_v1.featured_products')</button>
 	</div>
 </div>
 <br>

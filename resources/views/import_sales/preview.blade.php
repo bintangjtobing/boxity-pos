@@ -62,7 +62,7 @@
     @endcomponent
     <div class="row">
         <div class="col-md-12">
-            <button type="submit" class="btn btn-primary pull-right">@lang('messages.submit')</button>
+            <button type="submit" class="btn btn-primary-boxity pull-right">@lang('messages.submit')</button>
         </div>
     </div>
     {!! Form::close() !!}

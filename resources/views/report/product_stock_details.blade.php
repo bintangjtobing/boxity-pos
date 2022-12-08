@@ -12,7 +12,7 @@
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <div class="box box-primary" id="accordion">
+            <div class="box box-primary-boxity" id="accordion">
               <div class="box-header with-border">
                 <h3 class="box-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapseFilter">

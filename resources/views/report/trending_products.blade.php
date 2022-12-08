@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-sm-12">
-                  <button type="submit" class="btn btn-primary pull-right">@lang('report.apply_filters')</button>
+                  <button type="submit" class="btn btn-primary-boxity pull-right">@lang('report.apply_filters')</button>
                 </div> 
                 {!! Form::close() !!}
             @endcomponent
@@ -71,7 +71,7 @@
     </div>
     <div class="row">
         <div class="col-xs-12">
-            @component('components.widget', ['class' => 'box-primary'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
                 @slot('title')
                     @lang('report.top_trending_products') @show_tooltip(__('tooltip.top_trending_products'))
                 @endslot
@@ -81,7 +81,7 @@
     </div>
     <div class="row no-print">
         <div class="col-sm-12">
-            <button type="button" class="btn btn-primary pull-right" 
+            <button type="button" class="btn btn-primary-boxity pull-right" 
             aria-label="Print" onclick="window.print();"
             ><i class="fa fa-print"></i> @lang( 'messages.print' )</button>
         </div>

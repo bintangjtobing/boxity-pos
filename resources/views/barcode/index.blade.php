@@ -16,7 +16,7 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('barcode.all_your_barcode')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('barcode.all_your_barcode')])
         @slot('tool')
             <div class="box-tools">
                 <a class="btn btn-block btn-primary" href="{{action('BarcodeController@create')}}">

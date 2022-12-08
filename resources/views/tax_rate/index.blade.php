@@ -12,11 +12,11 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'tax_rate.all_your_tax_rates' )])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'tax_rate.all_your_tax_rates' )])
         @can('tax_rate.create')
             @slot('tool')
                 <div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                             data-href="{{action('TaxRateController@create')}}" 
                             data-container=".tax_rate_modal">
                             <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>
@@ -38,14 +38,14 @@
         @endcan
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         @slot('title')
             @lang( 'tax_rate.tax_groups' ) ( @lang('lang_v1.combination_of_taxes') ) @show_tooltip(__('tooltip.tax_groups'))
         @endslot
         @can('tax_rate.create')
             @slot('tool')
                 <div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     data-href="{{action('GroupTaxController@create')}}" 
                     data-container=".tax_group_modal">
                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

@@ -15,7 +15,7 @@
         @include('sell.partials.sell_list_filters')
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'sale.list_pos')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'sale.list_pos')])
         @can('sell.create')
             @slot('tool')
                 <div class="box-tools">

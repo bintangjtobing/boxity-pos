@@ -13,7 +13,7 @@
     @php
       $pos_settings = !empty(session('business.pos_settings')) ? json_decode(session('business.pos_settings'), true) : [];
     @endphp
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         {!! Form::open(['url' => action('RoleController@store'), 'method' => 'post', 'id' => 'role_add_form' ]) !!}
         <div class="row">
         <div class="col-md-4">
@@ -1538,7 +1538,7 @@
         @include('role.partials.module_permissions')
         <div class="row">
         <div class="col-md-12">
-           <button type="submit" class="btn btn-primary pull-right">@lang( 'messages.save' )</button>
+           <button type="submit" class="btn btn-primary-boxity pull-right">@lang( 'messages.save' )</button>
         </div>
         </div>
 

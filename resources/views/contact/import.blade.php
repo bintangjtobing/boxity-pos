@@ -29,7 +29,7 @@
     
     <div class="row">
         <div class="col-sm-12">
-            @component('components.widget', ['class' => 'box-primary'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
                 {!! Form::open(['url' => action('ContactController@postImportContacts'), 'method' => 'post', 'enctype' => 'multipart/form-data' ]) !!}
                     <div class="row">
                         <div class="col-sm-6">
@@ -58,7 +58,7 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            @component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.instructions')])
+            @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.instructions')])
                 <strong>@lang('lang_v1.instruction_line1')</strong><br>
                     @lang('lang_v1.instruction_line2')
                     <br><br>

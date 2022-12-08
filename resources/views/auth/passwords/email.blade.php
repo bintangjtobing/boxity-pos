@@ -17,7 +17,7 @@
         </div>
         <br>
         <div class="form-group">
-            <button type="submit" class="btn btn-primary btn-block btn-flat">
+            <button type="submit" class="btn btn-primary-boxity btn-block btn-rounded">
                 @lang('lang_v1.send_password_reset_link')
             </button>
         </div>

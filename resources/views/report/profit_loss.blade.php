@@ -45,7 +45,7 @@
 
     <div class="row no-print">
         <div class="col-sm-12">
-            <button type="button" class="btn btn-primary pull-right" 
+            <button type="button" class="btn btn-primary-boxity pull-right" 
             aria-label="Print" onclick="window.print();"
             ><i class="fa fa-print"></i> @lang( 'messages.print' )</button>
         </div>

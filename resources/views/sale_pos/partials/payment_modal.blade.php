@@ -31,7 +31,7 @@
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<button type="button" class="btn btn-primary btn-block" id="add-payment-row">@lang('sale.add_payment_row')</button>
+								<button type="button" class="btn btn-primary-boxity btn-block" id="add-payment-row">@lang('sale.add_payment_row')</button>
 							</div>
 						</div>
 						<br>

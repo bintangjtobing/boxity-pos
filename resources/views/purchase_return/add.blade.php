@@ -13,7 +13,7 @@
 	{!! Form::open(['url' => action('PurchaseReturnController@store'), 'method' => 'post', 'id' => 'purchase_return_form' ]) !!}
 	{!! Form::hidden('transaction_id', $purchase->id); !!}
 
-	@component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.parent_purchase')])
+	@component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.parent_purchase')])
 		<div class="row">
 			<div class="col-sm-4">
 				<strong>@lang('purchase.ref_no'):</strong> {{ $purchase->ref_no }} <br>
@@ -26,7 +26,7 @@
 		</div>
 	@endcomponent
 
-	@component('components.widget', ['class' => 'box-primary'])
+	@component('components.widget', ['class' => 'box-primary-boxity'])
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="form-group">
@@ -135,7 +135,7 @@
 		<br>
 		<div class="row">
 			<div class="col-sm-12">
-				<button type="submit" class="btn btn-primary pull-right">@lang('messages.save')</button>
+				<button type="submit" class="btn btn-primary-boxity pull-right">@lang('messages.save')</button>
 			</div>
 		</div>
 	@endcomponent

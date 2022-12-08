@@ -30,7 +30,7 @@
                 <button type="button" class="btn btn-default" data-dismiss="modal">
                     @lang('messages.close')
                 </button>
-                <button type="submit" class="btn btn-primary ladda-button">
+                <button type="submit" class="btn btn-primary-boxity ladda-button">
                     @lang('messages.save')
                 </button>
               </div>

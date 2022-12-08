@@ -32,7 +32,7 @@
 						</span>
 						{!! Form::select('contact_id', [], null, ['class' => 'form-control', 'placeholder' => __('messages.please_select'), 'required', 'id' => 'supplier_id']); !!}
 						<span class="input-group-btn">
-							<button type="button" class="btn btn-default bg-white btn-flat add_new_supplier" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+							<button type="button" class="btn btn-default bg-white btn-rounded add_new_supplier" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
 						</span>
 					</div>
 				</div>
@@ -354,7 +354,7 @@
 	</div>
 	<div class="row">
 			<div class="col-md-12 text-center">
-				<button type="button" class="btn btn-primary btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
+				<button type="button" class="btn btn-primary-boxity btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
 			</div>
 			<div class="col-md-8 col-md-offset-4" id="additional_expenses_div" style="display: none;">
 				<table class="table table-condensed">
@@ -469,7 +469,7 @@
 	@endcomponent
 	<div class="row">
 			<div class="col-sm-12">
-				<button type="button" id="submit_purchase_form" class="btn btn-primary pull-right btn-flat">@lang('messages.save')</button>
+				<button type="button" id="submit_purchase_form" class="btn btn-primary-boxity pull-right btn-rounded">@lang('messages.save')</button>
 			</div>
 		</div>
 

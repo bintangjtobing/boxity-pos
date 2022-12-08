@@ -101,7 +101,7 @@
 							{!! Form::select('contact_id', 
 								[], null, ['class' => 'form-control mousetrap', 'id' => 'customer_id', 'placeholder' => 'Enter Customer name / phone', 'required']); !!}
 							<span class="input-group-btn">
-								<button type="button" class="btn btn-default bg-white btn-flat add_new_customer" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+								<button type="button" class="btn btn-default bg-white btn-rounded add_new_customer" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
 							</span>
 						</div>
 						<small class="text-danger @if(empty($customer_due)) hide @endif contact_due_text"><strong>@lang('account.customer_due'):</strong> <span>{{$customer_due ?? ''}}</span></small>
@@ -310,13 +310,13 @@
 					<div class="form-group">
 						<div class="input-group">
 							<div class="input-group-btn">
-								<button type="button" class="btn btn-default bg-white btn-flat" data-toggle="modal" data-target="#configure_search_modal" title="{{__('lang_v1.configure_product_search')}}"><i class="fas fa-search-plus"></i></button>
+								<button type="button" class="btn btn-default bg-white btn-rounded" data-toggle="modal" data-target="#configure_search_modal" title="{{__('lang_v1.configure_product_search')}}"><i class="fas fa-search-plus"></i></button>
 							</div>
 							{!! Form::text('search_product', null, ['class' => 'form-control mousetrap', 'id' => 'search_product', 'placeholder' => __('lang_v1.search_product_placeholder'),
 							'autofocus' => true,
 							]); !!}
 							<span class="input-group-btn">
-								<button type="button" class="btn btn-default bg-white btn-flat pos_add_quick_product" data-href="{{action('ProductController@quickAdd')}}" data-container=".quick_add_product_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+								<button type="button" class="btn btn-default bg-white btn-rounded pos_add_quick_product" data-href="{{action('ProductController@quickAdd')}}" data-container=".quick_add_product_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
 							</span>
 						</div>
 					</div>
@@ -628,7 +628,7 @@
             </div>
 	        <div class="clearfix"></div>
 	        <div class="col-md-12 text-center">
-				<button type="button" class="btn btn-primary btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
+				<button type="button" class="btn btn-primary-boxity btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
 			</div>
 			<div class="col-md-8 col-md-offset-4" id="additional_expenses_div">
 				<table class="table table-condensed">
@@ -787,8 +787,8 @@
 	<div class="row">
 		<div class="col-md-12 text-center">
 	    	{!! Form::hidden('is_save_and_print', 0, ['id' => 'is_save_and_print']); !!}
-	    	<button type="button" class="btn btn-primary btn-big" id="submit-sell">@lang('messages.update')</button>
-	    	<button type="button" id="save-and-print" class="btn btn-success btn-big">@lang('lang_v1.update_and_print')</button>
+	    	<button type="button" class="btn btn-primary-boxity btn-block btn-lg" id="submit-sell">@lang('messages.update')</button>
+	    	<button type="button" id="save-and-print" class="btn btn-success btn-block btn-lg">@lang('lang_v1.update_and_print')</button>
 	    </div>
 	</div>
 	@if(in_array('subscription', $enabled_modules))

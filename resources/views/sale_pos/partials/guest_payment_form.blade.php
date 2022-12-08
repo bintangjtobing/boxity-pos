@@ -6,7 +6,7 @@
     <div class="spacer"></div>
     <div class="row">
         <div class="col-xs-12 col-md-6 col-md-offset-3">
-            <div class="box box-primary">
+            <div class="box box-primary-boxity">
                 <div class="box-body">
                     <table class="table no-border">
                         <tr>

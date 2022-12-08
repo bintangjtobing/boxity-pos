@@ -859,7 +859,7 @@ a:focus {
   margin: 0;
 }
 .control-sidebar-dark {
-  color: #b8c7ce;
+  color: #A6ADB5;
 }
 .control-sidebar-dark,
 .control-sidebar-dark + .control-sidebar-bg {
@@ -870,7 +870,7 @@ a:focus {
 }
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a {
   background: #181f23;
-  color: #b8c7ce;
+  color: #A6ADB5;
 }
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a,
 .control-sidebar-dark .nav-tabs.control-sidebar-tabs > li > a:hover,
@@ -901,7 +901,7 @@ a:focus {
   background: #1e282c;
 }
 .control-sidebar-dark .control-sidebar-menu > li > a .menu-info > p {
-  color: #b8c7ce;
+  color: #A6ADB5;
 }
 .control-sidebar-light {
   color: #5e5e5e;

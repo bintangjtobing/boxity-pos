@@ -5,7 +5,7 @@
 
 <!-- Content Header (Page header) -->
 <section class="content-header content-header-custom">
-    <h1>{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }}
+    <h1>{{ __('home.welcome_message', ['name' => Session::get('user.first_name')]) }} doing great today?
     </h1>
 </section>
 <!-- Main content -->
@@ -22,7 +22,7 @@
         		<div class="col-md-8 col-xs-12">
                     <div class="form-group pull-right">
                           <div class="input-group">
-                            <button type="button" class="btn btn-primary" id="dashboard_date_filter">
+                            <button type="button" class="btn btn-secondary-boxity" id="dashboard_date_filter">
                               <span>
                                 <i class="fa fa-calendar"></i> {{ __('messages.filter_by_date') }}
                               </span>
@@ -36,7 +36,7 @@
     	   <div class="row row-custom">
             	<div class="col-md-3 col-sm-6 col-xs-12 col-custom">
             	   <div class="info-box info-box-new-style">
-            	        <span class="info-box-icon bg-aqua"><i class="ion ion-cash"></i></span>
+            	        <span class="info-box-icon bg-boxity text-white"><i class="ion ion-cash"></i></span>
 
             	        <div class="info-box-content">
             	          <span class="info-box-text">{{ __('home.total_purchase') }}</span>
@@ -49,7 +49,7 @@
         	    <!-- /.col -->
         	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
         	       <div class="info-box info-box-new-style">
-            	        <span class="info-box-icon bg-aqua"><i class="ion ion-ios-cart-outline"></i></span>
+            	        <span class="info-box-icon bg-boxity text-white"><i class="ion ion-ios-cart-outline"></i></span>
 
             	        <div class="info-box-content">
             	          <span class="info-box-text">{{ __('home.total_sell') }}</span>
@@ -62,7 +62,7 @@
         	    <!-- /.col -->
         	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
         	       <div class="info-box info-box-new-style">
-            	        <span class="info-box-icon bg-yellow">
+            	        <span class="info-box-icon bg-boxity text-white">
             	        	<i class="fa fa-dollar"></i>
             				<i class="fa fa-exclamation"></i>
             	        </span>
@@ -81,7 +81,7 @@
         	    <!-- <div class="clearfix visible-sm-block"></div> -->
         	    <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
         	        <div class="info-box info-box-new-style">
-        	           <span class="info-box-icon bg-yellow">
+        	           <span class="info-box-icon bg-boxity text-white">
             	        	<i class="ion ion-ios-paper-outline"></i>
             	        	<i class="fa fa-exclamation"></i>
         	           </span>
@@ -99,7 +99,7 @@
           	<div class="row row-custom">
                 <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
                     <div class="info-box info-box-new-style">
-                       <span class="info-box-icon bg-red text-white">
+                       <span class="info-box-icon bg-boxity text-white">
                             <i class="fas fa-undo-alt"></i>
                        </span>
 
@@ -114,7 +114,7 @@
 
                 <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
                     <div class="info-box info-box-new-style">
-                       <span class="info-box-icon bg-red text-white">
+                       <span class="info-box-icon bg-boxity text-white">
                             <i class="fas fa-exchange-alt"></i>
                        </span>
 
@@ -129,7 +129,7 @@
                 <!-- expense -->
                 <div class="col-md-3 col-sm-6 col-xs-12 col-custom">
                     <div class="info-box info-box-new-style">
-                        <span class="info-box-icon bg-red">
+                        <span class="info-box-icon bg-boxity text-white">
                           <i class="fas fa-minus-circle"></i>
                         </span>
 
@@ -156,7 +156,7 @@
               	<!-- sales chart start -->
               	<div class="row">
               		<div class="col-sm-12">
-                        @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_last_30_days')])
+                        @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('home.sells_last_30_days')])
                           {!! $sells_chart_1->container() !!}
                         @endcomponent
               		</div>
@@ -170,7 +170,7 @@
             @if(!empty($all_locations))
               	<div class="row">
               		<div class="col-sm-12">
-                        @component('components.widget', ['class' => 'box-primary', 'title' => __('home.sells_current_fy')])
+                        @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('home.sells_current_fy')])
                           {!! $sells_chart_2->container() !!}
                         @endcomponent
               		</div>
@@ -187,7 +187,7 @@
       	<div class="row">
             @if(auth()->user()->can('sell.view') || auth()->user()->can('direct_sell.view'))
                 <div class="col-sm-6">
-                    @component('components.widget', ['class' => 'box-warning'])
+                    @component('components.widget', ['class' => 'box-primary-boxity'])
                       @slot('icon')
                         <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
                       @endslot
@@ -218,7 +218,7 @@
             @endif
             @can('purchase.view')
                 <div class="col-sm-6">
-                    @component('components.widget', ['class' => 'box-warning'])
+                    @component('components.widget', ['class' => 'box-primary-boxity'])
                     @slot('icon')
                     <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
                     @endslot
@@ -251,7 +251,7 @@
         @can('stock_report.view')
             <div class="row">
                 <div class="@if((session('business.enable_product_expiry') != 1) && auth()->user()->can('stock_report.view')) col-sm-12 @else col-sm-6 @endif">
-                    @component('components.widget', ['class' => 'box-warning'])
+                    @component('components.widget', ['class' => 'box-primary-boxity'])
                       @slot('icon')
                         <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
                       @endslot
@@ -271,7 +271,7 @@
                 </div>
                 @if(session('business.enable_product_expiry') == 1)
                     <div class="col-sm-6">
-                        @component('components.widget', ['class' => 'box-warning'])
+                        @component('components.widget', ['class' => 'box-primary-boxity'])
                           @slot('icon')
                             <i class="fa fa-exclamation-triangle text-yellow" aria-hidden="true"></i>
                           @endslot
@@ -297,7 +297,7 @@
         @if(auth()->user()->can('so.view_all') || auth()->user()->can('so.view_own'))
             <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
                 <div class="col-sm-12">
-                    @component('components.widget', ['class' => 'box-warning'])
+                    @component('components.widget', ['class' => 'box-primary-boxity'])
                         @slot('icon')
                             <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
                         @endslot
@@ -338,7 +338,7 @@
         @if(!empty($common_settings['enable_purchase_order']) && (auth()->user()->can('purchase_order.view_all') || auth()->user()->can('purchase_order.view_own')) )
             <div class="row" @if(!auth()->user()->can('dashboard.data'))style="margin-top: 190px !important;"@endif>
                 <div class="col-sm-12">
-                    @component('components.widget', ['class' => 'box-warning'])
+                    @component('components.widget', ['class' => 'box-primary-boxity'])
                       @slot('icon')
                           <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
                       @endslot
@@ -376,7 +376,7 @@
         @endif
 
         @if(auth()->user()->can('access_pending_shipments_only') || auth()->user()->can('access_shipping') || auth()->user()->can('access_own_shipping') )
-            @component('components.widget', ['class' => 'box-warning'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
               @slot('icon')
                   <i class="fas fa-list-alt text-yellow fa-lg" aria-hidden="true"></i>
               @endslot
@@ -438,7 +438,7 @@
         @endif
 
         @if(auth()->user()->can('account.access') && config('constants.show_payments_recovered_today') == true)
-            @component('components.widget', ['class' => 'box-warning'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
               @slot('icon')
                   <i class="fas fa-money-bill-alt text-yellow fa-lg" aria-hidden="true"></i>
               @endslot

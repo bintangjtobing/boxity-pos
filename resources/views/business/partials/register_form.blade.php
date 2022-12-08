@@ -4,7 +4,7 @@
 {!! Form::hidden('language', request()->lang); !!}
 
 <fieldset>
-<legend>@lang('business.business_details'):</legend>
+<legend>@lang('business.business_details')</legend>
 <div class="col-md-12">
     <div class="form-group">
         {!! Form::label('name', __('business.business_name') . ':*' ) !!}

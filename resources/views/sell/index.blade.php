@@ -23,7 +23,7 @@
             </div>
         @endif
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'lang_v1.all_sales')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'lang_v1.all_sales')])
         @can('direct_sell.access')
             @slot('tool')
                 <div class="box-tools">

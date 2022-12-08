@@ -44,7 +44,7 @@
         </div>
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="table-responsive">
     <table class="table table-bordered table-striped ajax_view" id="purchase_report_table">
         <thead>

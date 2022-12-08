@@ -52,7 +52,7 @@ class BusinessController extends Controller
         $this->moduleUtil = $moduleUtil;
 
         $this->theme_colors = [
-            'blue' => 'Blue',
+            'blue' => 'Orange Boxity',
             'black' => 'Black',
             'purple' => 'Purple',
             'green' => 'Green',
@@ -63,7 +63,6 @@ class BusinessController extends Controller
             'purple-light' => 'Purple Light',
             'green-light' => 'Green Light',
             'red-light' => 'Red Light',
-            'orange' => 'Orange',
         ];
 
         $this->mailDrivers = [

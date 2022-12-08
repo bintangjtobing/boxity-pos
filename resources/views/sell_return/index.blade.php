@@ -41,7 +41,7 @@
         </div>
         @endcan
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.sell_return')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.sell_return')])
         @include('sell_return.partials.sell_return_list')
     @endcomponent
     <div class="modal fade payment_modal" tabindex="-1" role="dialog" 

@@ -19,7 +19,7 @@
         @lang('lang_v1.opening_balance_payments')
       @endif</td>
       <td class="no-print">
-        <button type="button" class="btn btn-primary btn-xs view_payment" data-href="{{ action('TransactionPaymentController@viewPayment', [$payment->id]) }}" >@lang("messages.view")
+        <button type="button" class="btn btn-primary-boxity btn-xs view_payment" data-href="{{ action('TransactionPaymentController@viewPayment', [$payment->id]) }}" >@lang("messages.view")
                     </button>
       </td>
     </tr>

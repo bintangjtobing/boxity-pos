@@ -40,28 +40,28 @@ class TaxonomyController extends Controller
 
         if (request()->ajax()) {
             $can_edit = true;
-            if($category_type == 'product' && !auth()->user()->can('category.update')) {
+            if ($category_type == 'product' && !auth()->user()->can('category.update')) {
                 $can_edit = false;
             }
 
             $can_delete = true;
-            if($category_type == 'product' && !auth()->user()->can('category.update')) {
+            if ($category_type == 'product' && !auth()->user()->can('category.update')) {
                 $can_delete = false;
             }
 
             $business_id = request()->session()->get('user.business_id');
 
             $category = Category::where('business_id', $business_id)
-                            ->where('category_type', $category_type)
-                            ->select(['name', 'short_code', 'description', 'id', 'parent_id']);
+                ->where('category_type', $category_type)
+                ->select(['name', 'short_code', 'description', 'id', 'parent_id']);
 
             return Datatables::of($category)
                 ->addColumn(
-                    'action', function ($row) use ($can_edit, $can_delete, $category_type)
-                    {
+                    'action',
+                    function ($row) use ($can_edit, $can_delete, $category_type) {
                         $html = '';
                         if ($can_edit) {
-                            $html .= '<button data-href="' . action('TaxonomyController@edit', [$row->id]) . '?type=' . $category_type . '" class="btn btn-xs btn-primary edit_category_button"><i class="glyphicon glyphicon-edit"></i>' . __("messages.edit") . '</button>';
+                            $html .= '<button data-href="' . action('TaxonomyController@edit', [$row->id]) . '?type=' . $category_type . '" class="btn btn-xs btn-primary-boxity edit_category_button"><i class="glyphicon glyphicon-edit"></i>' . __("messages.edit") . '</button>';
                         }
 
                         if ($can_delete) {
@@ -105,10 +105,10 @@ class TaxonomyController extends Controller
         $module_category_data = $this->moduleUtil->getTaxonomyData($category_type);
 
         $categories = Category::where('business_id', $business_id)
-                        ->where('parent_id', 0)
-                        ->where('category_type', $category_type)
-                        ->select(['name', 'short_code', 'id'])
-                        ->get();
+            ->where('parent_id', 0)
+            ->where('category_type', $category_type)
+            ->select(['name', 'short_code', 'id'])
+            ->get();
 
         $parent_categories = [];
         if (!empty($categories)) {
@@ -118,7 +118,7 @@ class TaxonomyController extends Controller
         }
 
         return view('taxonomy.create')
-                    ->with(compact('parent_categories', 'module_category_data', 'category_type'));
+            ->with(compact('parent_categories', 'module_category_data', 'category_type'));
     }
 
     /**
@@ -145,16 +145,18 @@ class TaxonomyController extends Controller
             $input['created_by'] = $request->session()->get('user.id');
 
             $category = Category::create($input);
-            $output = ['success' => true,
-                            'data' => $category,
-                            'msg' => __("category.added_success")
-                        ];
+            $output = [
+                'success' => true,
+                'data' => $category,
+                'msg' => __("category.added_success")
+            ];
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-            $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+            $output = [
+                'success' => false,
+                'msg' => __("messages.something_went_wrong")
+            ];
         }
 
         return $output;
@@ -187,21 +189,21 @@ class TaxonomyController extends Controller
         if (request()->ajax()) {
             $business_id = request()->session()->get('user.business_id');
             $category = Category::where('business_id', $business_id)->find($id);
-            
+
             $module_category_data = $this->moduleUtil->getTaxonomyData($category_type);
 
             $parent_categories = Category::where('business_id', $business_id)
-                                        ->where('parent_id', 0)
-                                        ->where('category_type', $category_type)
-                                        ->where('id', '!=', $id)
-                                        ->pluck('name', 'id');
+                ->where('parent_id', 0)
+                ->where('category_type', $category_type)
+                ->where('id', '!=', $id)
+                ->pluck('name', 'id');
             $is_parent = false;
-            
+
             if ($category->parent_id == 0) {
                 $is_parent = true;
                 $selected_parent = null;
             } else {
-                $selected_parent = $category->parent_id ;
+                $selected_parent = $category->parent_id;
             }
 
             return view('taxonomy.edit')
@@ -233,7 +235,7 @@ class TaxonomyController extends Controller
                 $category->name = $input['name'];
                 $category->description = $input['description'];
                 $category->short_code = $request->input('short_code');
-                
+
                 if (!empty($request->input('add_as_sub_cat')) &&  $request->input('add_as_sub_cat') == 1 && !empty($request->input('parent_id'))) {
                     $category->parent_id = $request->input('parent_id');
                 } else {
@@ -241,15 +243,17 @@ class TaxonomyController extends Controller
                 }
                 $category->save();
 
-                $output = ['success' => true,
-                            'msg' => __("category.updated_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("category.updated_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -277,15 +281,17 @@ class TaxonomyController extends Controller
 
                 $category->delete();
 
-                $output = ['success' => true,
-                            'msg' => __("category.deleted_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("category.deleted_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -298,11 +304,11 @@ class TaxonomyController extends Controller
             $api_token = request()->header('API-TOKEN');
 
             $api_settings = $this->moduleUtil->getApiSettings($api_token);
-            
+
             $categories = Category::catAndSubCategories($api_settings->business_id);
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             return $this->respondWentWrong($e);
         }
 

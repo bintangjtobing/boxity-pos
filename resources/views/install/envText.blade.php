@@ -9,7 +9,7 @@
         <div class="col-md-8 col-md-offset-2">
           @include('install.partials.nav', ['active' => 'app_details'])
 
-          <div class="box box-primary active">
+          <div class="box box-primary-boxity active">
             <!-- /.box-header -->
             <div class="box-body">
 
@@ -47,7 +47,7 @@
                   </div>
                   
                   <div class="col-md-12">
-                    <button type="submit" class="btn btn-primary pull-right" id="install_button">Install</button>
+                    <button type="submit" class="btn btn-primary-boxity pull-right" id="install_button">Install</button>
                   </div>
 
                   <div class="col-md-12 text-center text-danger install_msg hide">

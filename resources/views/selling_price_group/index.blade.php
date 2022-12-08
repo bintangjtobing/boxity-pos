@@ -29,7 +29,7 @@
             </div>  
         </div>     
     @endif
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.import_export_selling_price_group_prices')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.import_export_selling_price_group_prices')])
             <div class="row">
                 <div class="col-sm-6">
                     <a href="{{action('SellingPriceGroupController@export')}}" class="btn btn-primary">@lang('lang_v1.export_selling_price_group_prices')</a>
@@ -59,10 +59,10 @@
                 </div>
             </div>
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'lang_v1.all_selling_price_group' )])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'lang_v1.all_selling_price_group' )])
         @slot('tool')
             <div class="box-tools">
-                <button type="button" class="btn btn-block btn-primary btn-modal" 
+                <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     data-href="{{action('SellingPriceGroupController@create')}}" 
                     data-container=".view_modal">
                     <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

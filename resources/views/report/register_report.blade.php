@@ -38,7 +38,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            @component('components.widget', ['class' => 'box-primary'])
+            @component('components.widget', ['class' => 'box-primary-boxity'])
                 <table class="table table-bordered table-striped" id="register_report_table">
                     <thead>
                         <tr>

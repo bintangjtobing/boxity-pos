@@ -11,11 +11,13 @@
 |
 */
 
+use Illuminate\Support\Facades\Redirect;
+
 include_once('install_r.php');
 
 Route::middleware(['setData'])->group(function () {
     Route::get('/', function () {
-        return view('welcome');
+        return Redirect('/login');
     });
 
     Auth::routes();

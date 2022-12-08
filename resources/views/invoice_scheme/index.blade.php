@@ -28,7 +28,7 @@
               <div class="tab-pane active" id="tab_1">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4>@lang( 'invoice.all_your_invoice_schemes' ) <button type="button" class="btn btn-primary btn-modal pull-right" 
+                        <h4>@lang( 'invoice.all_your_invoice_schemes' ) <button type="button" class="btn btn-primary-boxity btn-modal pull-right" 
                                 data-href="{{action('InvoiceSchemeController@create')}}" 
                                 data-container=".invoice_modal">
                                 <i class="fa fa-plus"></i> @lang( 'messages.add' )</button></h4>
@@ -58,7 +58,7 @@
               <div class="tab-pane" id="tab_2">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4>@lang( 'invoice.all_your_invoice_layouts' ) <a class="btn btn-primary pull-right" href="{{action('InvoiceLayoutController@create')}}">
+                        <h4>@lang( 'invoice.all_your_invoice_layouts' ) <a class="btn btn-primary-boxity pull-right" href="{{action('InvoiceLayoutController@create')}}">
                                 <i class="fa fa-plus"></i> @lang( 'messages.add' )</a></h4>
                     </div>
                     <div class="col-md-12">

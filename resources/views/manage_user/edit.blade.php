@@ -14,7 +14,7 @@
     {!! Form::open(['url' => action('ManageUserController@update', [$user->id]), 'method' => 'PUT', 'id' => 'user_edit_form' ]) !!}
     <div class="row">
         <div class="col-md-12">
-        @component('components.widget', ['class' => 'box-primary'])
+        @component('components.widget', ['class' => 'box-primary-boxity'])
             <div class="col-md-2">
                 <div class="form-group">
                   {!! Form::label('surname', __( 'business.prefix' ) . ':') !!}
@@ -187,7 +187,7 @@
     @endif
     <div class="row">
         <div class="col-md-12 text-center">
-            <button type="submit" class="btn btn-primary btn-big" id="submit_user_button">@lang( 'messages.update' )</button>
+            <button type="submit" class="btn btn-primary-boxity btn-block btn-lg" id="submit_user_button">@lang( 'messages.update' )</button>
         </div>
     </div>
     {!! Form::close() !!}

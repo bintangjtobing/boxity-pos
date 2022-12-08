@@ -39,15 +39,15 @@ class ModifierSetsController extends Controller
             $business_id = request()->session()->get('user.business_id');
 
             $modifer_set = Product::where('business_id', $business_id)
-                            ->where('type', 'modifier')
-                            ->with(['variations', 'modifier_products']);
+                ->where('type', 'modifier')
+                ->with(['variations', 'modifier_products']);
 
             return \Datatables::of($modifer_set)
                 ->addColumn(
                     'action',
                     '
                     @can("product.update")
-                        <button type="button" data-href="{{action(\'Restaurant\ModifierSetsController@edit\', [$id])}}" class="btn btn-xs btn-primary edit_modifier_button" data-container=".modifier_modal"><i class="glyphicon glyphicon-edit"></i> @lang("messages.edit")</button>
+                        <button type="button" data-href="{{action(\'Restaurant\ModifierSetsController@edit\', [$id])}}" class="btn btn-xs btn-primary-boxity edit_modifier_button" data-container=".modifier_modal"><i class="glyphicon glyphicon-edit"></i> @lang("messages.edit")</button>
                         &nbsp;
                         <button type="button" data-href="{{action(\'Restaurant\ProductModifierSetController@edit\', [$id])}}" class="btn btn-xs btn-info edit_modifier_button" data-container=".modifier_modal"><i class="fa fa-cubes"></i> @lang("restaurant.manage_products")</button>
                     &nbsp;
@@ -89,7 +89,7 @@ class ModifierSetsController extends Controller
         if (!auth()->user()->can('product.create')) {
             abort(403, 'Unauthorized action.');
         }
-        
+
         return view('restaurant.modifier_sets.create');
     }
 
@@ -149,8 +149,8 @@ class ModifierSetsController extends Controller
             $output = ['success' => 1, 'msg' => __("lang_v1.added_success")];
         } catch (\Exception $e) {
             DB::rollBack();
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             $output = ['success' => 0, 'msg' => __("messages.something_went_wrong")];
         }
 
@@ -180,15 +180,15 @@ class ModifierSetsController extends Controller
             $business_id = $request->session()->get('user.business_id');
 
             $modifer_set = Product::where('business_id', $business_id)
-                            ->where('id', $id)
-                            ->with(['variations'])
-                            ->first();
+                ->where('id', $id)
+                ->with(['variations'])
+                ->first();
 
             return view('restaurant.modifier_sets.edit')
                 ->with(compact('modifer_set'));
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             $output = ['success' => 0, 'msg' => __("messages.something_went_wrong")];
         }
     }
@@ -212,9 +212,9 @@ class ModifierSetsController extends Controller
             $user_id = $request->session()->get('user.id');
 
             $modifer_set = Product::where('business_id', $business_id)
-                    ->where('id', $id)
-                    ->where('type', 'modifier')
-                    ->first();
+                ->where('id', $id)
+                ->where('type', 'modifier')
+                ->first();
             $modifer_set->update(['name' => $input['name']]);
 
             //Get the dummy product variation
@@ -265,8 +265,8 @@ class ModifierSetsController extends Controller
             $output = ['success' => 1, 'msg' => __("lang_v1.updated_success")];
         } catch (\Exception $e) {
             DB::rollBack();
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             $output = ['success' => 0, 'msg' => __("messages.something_went_wrong")];
         }
 
@@ -297,8 +297,8 @@ class ModifierSetsController extends Controller
             $output = ['success' => 1, 'msg' => __("lang_v1.deleted_success")];
         } catch (\Exception $e) {
             DB::rollBack();
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             $output = ['success' => 0, 'msg' => __("messages.something_went_wrong")];
         }
 

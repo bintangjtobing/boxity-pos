@@ -27,7 +27,7 @@
   <input type="hidden" id="is_purchase_order">
   <input type="hidden" id="purchase_id" value="{{ $purchase->id }}">
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="row">
             <div class="@if(!empty($default_purchase_status)) col-sm-4 @else col-sm-3 @endif">
               <div class="form-group">
@@ -38,7 +38,7 @@
                   </span>
                   {!! Form::select('contact_id', [ $purchase->contact_id => $purchase->contact->name], $purchase->contact_id, ['class' => 'form-control', 'placeholder' => __('messages.please_select') , 'required', 'id' => 'supplier_id']); !!}
                   <span class="input-group-btn">
-                    <button type="button" class="btn btn-default bg-white btn-flat add_new_supplier" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+                    <button type="button" class="btn btn-default bg-white btn-rounded add_new_supplier" data-name=""><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
                   </span>
                 </div>
               </div>
@@ -120,7 +120,7 @@
         </div>
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
               <div class="form-group">
@@ -328,7 +328,7 @@
           </div>
           <div class="row">
             <div class="col-md-12 text-center">
-              <button type="button" class="btn btn-primary btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
+              <button type="button" class="btn btn-primary-boxity btn-sm" id="toggle_additional_expense"> <i class="fas fa-plus"></i> @lang('lang_v1.add_additional_expenses') <i class="fas fa-chevron-down"></i></button>
             </div>
             <div class="col-md-8 col-md-offset-4" id="additional_expenses_div">
               <table class="table table-condensed">
@@ -453,7 +453,7 @@
   
     <div class="row">
         <div class="col-sm-12">
-          <button type="button" id="submit_purchase_form" class="btn btn-primary pull-right btn-flat">@lang('messages.update')</button>
+          <button type="button" id="submit_purchase_form" class="btn btn-primary-boxity pull-right btn-rounded">@lang('messages.update')</button>
         </div>
     </div>
 {!! Form::close() !!}

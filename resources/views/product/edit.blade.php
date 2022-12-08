@@ -18,7 +18,7 @@
         'class' => 'product_form', 'files' => true ]) !!}
     <input type="hidden" id="product_id" value="{{ $product->id }}">
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="row">
             <div class="col-sm-4">
               <div class="form-group">
@@ -51,7 +51,7 @@
                 <div class="input-group">
                   {!! Form::select('unit_id', $units, $product->unit_id, ['placeholder' => __('messages.please_select'), 'class' => 'form-control select2', 'required']); !!}
                   <span class="input-group-btn">
-                    <button type="button" @if(!auth()->user()->can('unit.create')) disabled @endif class="btn btn-default bg-white btn-flat quick_add_unit btn-modal" data-href="{{action('UnitController@create', ['quick_add' => true])}}" title="@lang('unit.add_unit')" data-container=".view_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+                    <button type="button" @if(!auth()->user()->can('unit.create')) disabled @endif class="btn btn-default bg-white btn-rounded quick_add_unit btn-modal" data-href="{{action('UnitController@create', ['quick_add' => true])}}" title="@lang('unit.add_unit')" data-container=".view_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
                   </span>
                 </div>
               </div>
@@ -78,7 +78,7 @@
                 <div class="input-group">
                   {!! Form::select('brand_id', $brands, $product->brand_id, ['placeholder' => __('messages.please_select'), 'class' => 'form-control select2']); !!}
                   <span class="input-group-btn">
-                    <button type="button" @if(!auth()->user()->can('brand.create')) disabled @endif class="btn btn-default bg-white btn-flat btn-modal" data-href="{{action('BrandController@create', ['quick_add' => true])}}" title="@lang('brand.add_brand')" data-container=".view_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
+                    <button type="button" @if(!auth()->user()->can('brand.create')) disabled @endif class="btn btn-default bg-white btn-rounded btn-modal" data-href="{{action('BrandController@create', ['quick_add' => true])}}" title="@lang('brand.add_brand')" data-container=".view_modal"><i class="fa fa-plus-circle text-primary fa-lg"></i></button>
                   </span>
                 </div>
               </div>
@@ -171,7 +171,7 @@
             </div>
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="row">
         @if(session('business.enable_product_expiry'))
 
@@ -313,7 +313,7 @@
         </div>
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="row">
             <div class="col-sm-4 @if(!session('business.enable_price_tax')) hide @endif">
               <div class="form-group">
@@ -360,7 +360,7 @@
 
               <button type="submit" value="save_n_add_another" class="btn bg-maroon submit_product_form">@lang('lang_v1.update_n_add_another')</button>
 
-              <button type="submit" value="submit" class="btn btn-primary submit_product_form">@lang('messages.update')</button>
+              <button type="submit" value="submit" class="btn btn-primary-boxity submit_product_form">@lang('messages.update')</button>
             </div>
           </div>
         </div>

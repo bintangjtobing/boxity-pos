@@ -16,7 +16,7 @@
 <!-- Main content -->
 <section class="content no-print">
 	{!! Form::open(['url' => '#', 'method' => 'post', 'id' => 'preview_setting_form', 'onsubmit' => 'return false']) !!}
-	@component('components.widget', ['class' => 'box-primary', 'title' => __('product.add_product_for_labels')])
+	@component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('product.add_product_for_labels')])
 		<div class="row">
 			<div class="col-sm-8 col-sm-offset-2">
 				<div class="form-group">
@@ -55,7 +55,7 @@
 		</div>
 	@endcomponent
 
-	@component('components.widget', ['class' => 'box-primary', 'title' => __( 'barcode.info_in_labels' )])
+	@component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'barcode.info_in_labels' )])
 		<div class="row">
 			<div class="col-md-12">
 				<table class="table table-bordered">
@@ -215,7 +215,7 @@
 			<div class="clearfix"></div>
 			
 			<div class="col-sm-4 col-sm-offset-8">
-				<button type="button" id="labels_preview" class="btn btn-primary pull-right btn-flat btn-block">@lang( 'barcode.preview' )</button>
+				<button type="button" id="labels_preview" class="btn btn-primary-boxity pull-right btn-rounded btn-block">@lang( 'barcode.preview' )</button>
 			</div>
 		</div>
 	@endcomponent

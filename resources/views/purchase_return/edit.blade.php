@@ -140,7 +140,7 @@
 	</div> <!--box end-->
 	<div class="row">
 		<div class="col-md-12">
-			<button type="button" id="submit_purchase_return_form" class="btn btn-primary pull-right btn-flat">@lang('messages.update')</button>
+			<button type="button" id="submit_purchase_return_form" class="btn btn-primary-boxity pull-right btn-rounded">@lang('messages.update')</button>
 		</div>
 	</div>
 	{!! Form::close() !!}

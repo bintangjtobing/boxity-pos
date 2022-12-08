@@ -22,7 +22,7 @@
         	<h3 class="box-title">@lang( 'restaurant.all_your_modifiers' )</h3>
             @can('restaurant.create')
             	<div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                     	data-href="{{action('Restaurant\ModifierSetsController@create')}}" 
                     	data-container=".modifier_modal">
                     	<i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

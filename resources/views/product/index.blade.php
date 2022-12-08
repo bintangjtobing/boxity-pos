@@ -113,7 +113,7 @@
                 <div class="tab-content">
                     <div class="tab-pane active" id="product_list_tab">
                         @can('product.create')
-                            <a class="btn btn-primary pull-right" href="{{action('ProductController@create')}}">
+                            <a class="btn btn-primary-boxity pull-right" href="{{action('ProductController@create')}}">
                                         <i class="fa fa-plus"></i> @lang('messages.add')</a>
                             <br><br>
                         @endcan

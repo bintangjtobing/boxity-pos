@@ -16,7 +16,7 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'user.all_roles' )])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'user.all_roles' )])
         @can('roles.create')
             @slot('tool')
                 <div class="box-tools">

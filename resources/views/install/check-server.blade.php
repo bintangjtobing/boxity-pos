@@ -10,7 +10,7 @@
           <hr/>
           @include('install.partials.nav', ['active' => 'server'])
 
-          <div class="box box-primary active" id="Installation">
+          <div class="box box-primary-boxity active" id="Installation">
             <!-- /.box-header -->
             <div class="box-body">
               <table class="table">
@@ -144,7 +144,7 @@
               <br/>
               <a href="{{route('install.index')}}" class="btn btn-default pull-left">Back</a>
 
-              <a @if($output['next']) href="{{route('install.details')}}" @endif class="btn btn-primary pull-right @if(!$output['next']) disabled-link @endif" @if(!$output['next']) disabled onclick="return false;" @endif>Next</a>
+              <a @if($output['next']) href="{{route('install.details')}}" @endif class="btn btn-primary-boxity pull-right @if(!$output['next']) disabled-link @endif" @if(!$output['next']) disabled onclick="return false;" @endif>Next</a>
             </div>
           <!-- /.box-body -->
           </div>

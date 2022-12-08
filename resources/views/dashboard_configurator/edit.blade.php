@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="col-md-12 mt-15">
-			<button class="btn btn-primary pull-right">
+			<button class="btn btn-primary-boxity pull-right">
 				@lang('messages.save')
 			</button>
 		</div>

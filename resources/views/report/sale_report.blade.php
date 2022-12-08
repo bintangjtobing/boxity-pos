@@ -15,7 +15,7 @@
         @include('sell.partials.sell_list_filters')
     @endcomponent
 
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         <div class="table-responsive">
     <table class="table table-bordered table-striped ajax_view" id="sale_report_table">
         <thead>

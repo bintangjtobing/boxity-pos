@@ -63,7 +63,7 @@
     @php
         $custom_labels = json_decode(session('business.custom_labels'), true);
     @endphp
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         @if(auth()->user()->can('access_shipping') ||
          auth()->user()->can('access_own_shipping') ||
           auth()->user()->can('access_commission_agent_shipping') )

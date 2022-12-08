@@ -45,7 +45,7 @@
             </div>
         </div>
     @endcomponent
-    @component('components.widget', ['class' => 'box-primary'])
+    @component('components.widget', ['class' => 'box-primary-boxity'])
         @can('so.create')
             @slot('tool')
                 <div class="box-tools">

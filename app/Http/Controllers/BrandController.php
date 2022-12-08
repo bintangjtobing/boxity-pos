@@ -41,13 +41,13 @@ class BrandController extends Controller
             $business_id = request()->session()->get('user.business_id');
 
             $brands = Brands::where('business_id', $business_id)
-                        ->select(['name', 'description', 'id']);
+                ->select(['name', 'description', 'id']);
 
             return Datatables::of($brands)
                 ->addColumn(
                     'action',
                     '@can("brand.update")
-                    <button data-href="{{action(\'BrandController@edit\', [$id])}}" class="btn btn-xs btn-primary edit_brand_button"><i class="glyphicon glyphicon-edit"></i> @lang("messages.edit")</button>
+                    <button data-href="{{action(\'BrandController@edit\', [$id])}}" class="btn btn-xs btn-primary-boxity edit_brand_button"><i class="glyphicon glyphicon-edit"></i> @lang("messages.edit")</button>
                         &nbsp;
                     @endcan
                     @can("brand.delete")
@@ -81,7 +81,7 @@ class BrandController extends Controller
         $is_repair_installed = $this->moduleUtil->isModuleInstalled('Repair');
 
         return view('brand.create')
-                ->with(compact('quick_add', 'is_repair_installed'));
+            ->with(compact('quick_add', 'is_repair_installed'));
     }
 
     /**
@@ -107,16 +107,18 @@ class BrandController extends Controller
             }
 
             $brand = Brands::create($input);
-            $output = ['success' => true,
-                            'data' => $brand,
-                            'msg' => __("brand.added_success")
-                        ];
+            $output = [
+                'success' => true,
+                'data' => $brand,
+                'msg' => __("brand.added_success")
+            ];
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-            $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+            $output = [
+                'success' => false,
+                'msg' => __("messages.something_went_wrong")
+            ];
         }
 
         return $output;
@@ -181,18 +183,20 @@ class BrandController extends Controller
                 if ($this->moduleUtil->isModuleInstalled('Repair')) {
                     $brand->use_for_repair = !empty($request->input('use_for_repair')) ? 1 : 0;
                 }
-                
+
                 $brand->save();
 
-                $output = ['success' => true,
-                            'msg' => __("brand.updated_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("brand.updated_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -218,15 +222,17 @@ class BrandController extends Controller
                 $brand = Brands::where('business_id', $business_id)->findOrFail($id);
                 $brand->delete();
 
-                $output = ['success' => true,
-                            'msg' => __("brand.deleted_success")
-                            ];
+                $output = [
+                    'success' => true,
+                    'msg' => __("brand.deleted_success")
+                ];
             } catch (\Exception $e) {
-                \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-            
-                $output = ['success' => false,
-                            'msg' => __("messages.something_went_wrong")
-                        ];
+                \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
+                $output = [
+                    'success' => false,
+                    'msg' => __("messages.something_went_wrong")
+                ];
             }
 
             return $output;
@@ -239,12 +245,12 @@ class BrandController extends Controller
             $api_token = request()->header('API-TOKEN');
 
             $api_settings = $this->moduleUtil->getApiSettings($api_token);
-            
+
             $brands = Brands::where('business_id', $api_settings->business_id)
-                                ->get();
+                ->get();
         } catch (\Exception $e) {
-            \Log::emergency("File:" . $e->getFile(). "Line:" . $e->getLine(). "Message:" . $e->getMessage());
-        
+            \Log::emergency("File:" . $e->getFile() . "Line:" . $e->getLine() . "Message:" . $e->getMessage());
+
             return $this->respondWentWrong($e);
         }
 

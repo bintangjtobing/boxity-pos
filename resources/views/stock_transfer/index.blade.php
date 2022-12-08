@@ -11,7 +11,7 @@
 
 <!-- Main content -->
 <section class="content no-print">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __('lang_v1.all_stock_transfers')])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __('lang_v1.all_stock_transfers')])
         @slot('tool')
             <div class="box-tools">
                 <a class="btn btn-block btn-primary" href="{{action('StockTransferController@create')}}">

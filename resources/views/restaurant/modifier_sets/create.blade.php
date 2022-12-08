@@ -52,7 +52,7 @@
                         </tr>';
 
                     $html_first_row = $html . "<td>
-                            <button class='btn btn-primary btn-xs pull-right add-modifier-row' type='button'
+                            <button class='btn btn-primary-boxity btn-xs pull-right add-modifier-row' type='button'
                             data-html='{{ $html_other_row }}'>
                             <i class='fa fa-plus'></i></button>
                           </td>

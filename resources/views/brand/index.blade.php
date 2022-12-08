@@ -16,11 +16,11 @@
 
 <!-- Main content -->
 <section class="content">
-    @component('components.widget', ['class' => 'box-primary', 'title' => __( 'brand.all_your_brands' )])
+    @component('components.widget', ['class' => 'box-primary-boxity', 'title' => __( 'brand.all_your_brands' )])
         @can('brand.create')
             @slot('tool')
                 <div class="box-tools">
-                    <button type="button" class="btn btn-block btn-primary btn-modal" 
+                    <button type="button" class="btn btn-block btn-primary-boxity btn-modal" 
                         data-href="{{action('BrandController@create')}}" 
                         data-container=".brands_modal">
                         <i class="fa fa-plus"></i> @lang( 'messages.add' )</button>

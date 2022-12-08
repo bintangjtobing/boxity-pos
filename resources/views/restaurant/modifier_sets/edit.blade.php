@@ -73,7 +73,7 @@
                     @if(!$loop->first)
                       <button class="btn btn-danger btn-xs pull-right remove-modifier-row" type="button"><i class="fa fa-minus"></i></button>
                     @else
-                      <button class="btn btn-primary btn-xs pull-right add-modifier-row" type="button" data-html="{{ $html }}">
+                      <button class="btn btn-primary-boxity btn-xs pull-right add-modifier-row" type="button" data-html="{{ $html }}">
                         <i class="fa fa-plus"></i>
                       </button>
                     @endif

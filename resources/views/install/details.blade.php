@@ -10,7 +10,7 @@
           <hr/>
           @include('install.partials.nav', ['active' => 'app_details'])
 
-          <div class="box box-primary active">
+          <div class="box box-primary-boxity active">
             <!-- /.box-header -->
             <div class="box-body">
 
@@ -191,7 +191,7 @@
 
                   <div class="col-md-12">
                     <a href="{{route('install.index')}}" class="btn btn-default pull-left back_button" tabindex="-1">Back</a>
-                    <button type="submit" id="install_button" class="btn btn-primary pull-right">Install</button>
+                    <button type="submit" id="install_button" class="btn btn-primary-boxity pull-right">Install</button>
                   </div>
 
                   <div class="col-md-12 text-center text-danger install_msg hide">

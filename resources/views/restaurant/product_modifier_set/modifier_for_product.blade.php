@@ -45,7 +45,7 @@
             <div class="panel-body">
               <div class="btn-group" data-toggle="buttons">
                 @foreach($modifier_set->variations as $modifier)
-                  <label class="btn btn-primary @if(!empty($edit_modifiers) && in_array($modifier->id, $product->modifiers_ids) ) active @endif">
+                  <label class="btn btn-primary-boxity @if(!empty($edit_modifiers) && in_array($modifier->id, $product->modifiers_ids) ) active @endif">
                     <input type="checkbox" autocomplete="off" 
                       value="{{$modifier->id}}" @if(!empty($edit_modifiers) && in_array($modifier->id, $product->modifiers_ids) ) checked @endif> 
                       {{$modifier->name}}
@@ -64,7 +64,7 @@
     </div>
 
     <div class="modal-footer">
-      <button data-url="{{action('Restaurant\ProductModifierSetController@add_selected_modifiers')}}" type="button" class="btn btn-primary add_modifier" data-dismiss="modal">
+      <button data-url="{{action('Restaurant\ProductModifierSetController@add_selected_modifiers')}}" type="button" class="btn btn-primary-boxity add_modifier" data-dismiss="modal">
         @lang( 'messages.add' )</button>
       <button type="button" class="btn btn-default" data-dismiss="modal">@lang( 'messages.close' )</button>
     </div>

@@ -8,7 +8,7 @@
         <div class="col-md-8 col-md-offset-2">
             <br/><br/>
 
-            <div class="box box-primary active">
+            <div class="box box-primary-boxity active">
                 <!-- /.box-header -->
                 <div class="box-body">
 
@@ -67,7 +67,7 @@
                     {{-- @include('install.partials.e_license') --}}
 
                     <div class="col-md-12">
-                        <button type="submit" id="install_button" class="btn btn-primary pull-right">I Agree, Install</button>
+                        <button type="submit" id="install_button" class="btn btn-primary-boxity pull-right">I Agree, Install</button>
                     </div>
               </form>
             </div>

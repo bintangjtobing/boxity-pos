@@ -29,10 +29,10 @@
 
   <div class="row">
     <div class="col-sm-12">
-      @component('components.widget', ['class' => 'box-primary'])
+      @component('components.widget', ['class' => 'box-primary-boxity'])
         @slot('tool')
           <div class="box-tools">
-            <a id="create-new-backup-button" href="{{ url('backup/create') }}" class="btn btn-primary pull-right"
+            <a id="create-new-backup-button" href="{{ url('backup/create') }}" class="btn btn-primary-boxity pull-right"
                      style="margin-bottom:2em;"><i
                           class="fa fa-plus"></i> @lang('lang_v1.create_new_backup')
             </a>
